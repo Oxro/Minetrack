@@ -263,24 +263,6 @@ footer a:hover {
   display: inline-block;
 }
 
-.server .column-status .server-is-favorite {
-  cursor: pointer;
-  color: var(--color-gold);
-}
-
-.server .column-status .server-is-favorite:hover::before {
-  content: "\f006";
-}
-
-.server .column-status .server-is-not-favorite {
-  cursor: pointer;
-  color: var(--background-color);
-}
-
-.server .column-status .server-is-not-favorite:hover {
-  color: var(--color-gold);
-}
-
 .server .column-status .server-error {
   display: none;
   color: #e74c3c;
@@ -298,11 +280,27 @@ footer a:hover {
 }
 
 .server .column-graph {
-  float: right;
   height: 100px;
   width: 400px;
-  margin-right: -3px;
-  margin-bottom: 5px;
+}
+
+/* Favorite icons */
+.server-is-favorite {
+  cursor: pointer;
+  color: var(--color-gold);
+}
+
+.server-is-favorite:hover::before {
+  content: "\f006";
+}
+
+.server-is-not-favorite {
+  cursor: pointer;
+  color: var(--background-color);
+}
+
+.server-is-not-favorite:hover {
+  color: var(--color-gold);
 }
 
 /* Highlighted values */
@@ -344,6 +342,10 @@ footer a:hover {
 #big-graph-mobile-load-request a {
   display: inline-block;
   color: var(--text-color);
+}
+
+#big-graph {
+  padding-right: 65px;
 }
 
 #big-graph, #big-graph-controls, #big-graph-checkboxes {

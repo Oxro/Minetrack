@@ -99,15 +99,15 @@ export function formatMinecraftVersions (versions, knownVersions) {
   }).join(', ')
 }
 
-export function formatTimestamp (millis) {
+export function formatTimestampSeconds (secs) {
   const date = new Date(0)
-  date.setUTCSeconds(millis / 1000)
+  date.setUTCSeconds(secs)
   return date.toLocaleTimeString()
 }
 
-export function formatDate (millis) {
+export function formatDate (secs) {
   const date = new Date(0)
-  date.setUTCSeconds(millis / 1000)
+  date.setUTCSeconds(secs)
   return date.toLocaleDateString()
 }
 
@@ -118,21 +118,6 @@ export function formatPercent (x, over) {
 
 export function formatNumber (x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-}
-
-export function isArrayEqual (a, b) {
-  if (typeof a === 'undefined' || typeof a !== typeof b) {
-    return false
-  }
-  if (a.length !== b.length) {
-    return false
-  }
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) {
-      return false
-    }
-  }
-  return true
 }
 
 // From http://detectmobilebrowsers.com/
